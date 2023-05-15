@@ -4,29 +4,27 @@ public class BusinessAccount extends Account{
     private Double loamLimit;
 
 
-    public void loamMount(){
-        if(this.getBalance() > this.loamLimit){
-            this.setBalance(this.getBalance() - this.loamLimit);
-        }else{
-            this.setBalance(0.0);
-        }
+    
+
+    private void loan(double amount){
+        if(this.getBalence() > loamLimit){
+            this.setBalance(this.getBalence() - amount);
+            }else{
+                System.out.println("You can't loan this amount");
+            }
     }
 
     private void setBalance(double d) {
     }
 
-    private Double getBalance() {
-        return null;
-    }
-
     public BusinessAccount(){ 
-        super();
     }
 
-    public BusinessAccount(Integer number, String holder, Double balence, Double loamLimit) {
-        super(number, holder, balence);
+
+    public BusinessAccount(Double loamLimit) {
         this.loamLimit = loamLimit;
     }
+    
 
     public Double getLoamLimit() {
         return this.loamLimit;
@@ -35,5 +33,4 @@ public class BusinessAccount extends Account{
     public void setLoamLimit(Double loamLimit) {
         this.loamLimit = loamLimit;
     }
-
 }

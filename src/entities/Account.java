@@ -3,7 +3,7 @@ package entities;
 public class Account {
     private Integer number;
     private String holder;
-    private Double balence;
+    protected Double balence;
 
     public Account(){
     }
